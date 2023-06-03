@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 012
+  labels:
+    app: 012
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 012
+  template:
+    metadata:
+      labels:
+        app: 012
+    spec:
+      containers:
+      - name: 012
+        image: meghaprabhu/docimg3:latest
+        ports:
+        - containerPort: 80
+
